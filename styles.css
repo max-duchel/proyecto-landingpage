@@ -12152,4 +12152,10 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+/*
+Estilos css
+*/
+body {
+  background-color: rgb(78, 43, 44);
 }/*# sourceMappingURL=styles.css.map */

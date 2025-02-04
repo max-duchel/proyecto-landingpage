@@ -8,18 +8,277 @@
     <!--css de bootstrap v5.3.3-->
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css" />
+    <!--js de bootstrap v5.3.3-->
+    <script defer src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </head>
 
-<body class="bg-color1"> <!-- color1 es una variable de color personalizada -->
-    <header>
-        <div>
-            <h1 class="text-white p-5 col-5"><i class="bi bi-cup-hot"></i> café</h1>
+<body> <!-- color1 es una variable de color personalizada -->
 
+    <!-- Cabecera -->
+    <header class="sticky-top bg-color1">
+        <div class="container-fluid sticky-top bg-color1 p-4"> <!-- Formato grid (container -> row -> col) -->
+            <div class="row"> <!-- Una fila -->
+                <div class="col-12"> <!-- Una columna que ocupa el máximo -->
+                    <h1>
+                        <a href="#" class="text-white text-decoration-none">
+                            <i class="bi bi-cup-hot"></i> Coffee Shop
+                        </a>
+                    </h1>
+                </div>
+            </div>
         </div>
     </header>
 
+    <!-- Inicio -->
+    <div class="container my-5 text-white">
+        <div class="row align-items-center">
+            <!-- Texto a la izquierda (col-6 en todos los tamaños) -->
+            <div class="col-12 col-sm-6">
+                <h2 class="text-color2">Best coffe</h2>
+                <p>Bienvenid@ a nuestra cafetería, donde todo el mundo...</p>
+            </div>
 
-    <!--
+            <!-- Imagen a la derecha (col-6 en todos los tamaños, pero oculta en md en adelante) -->
+            <div class="col-12 col-sm-6 d-none d-sm-block">
+                <img src="./img/coffee-hero-section.png" class="img-fluid rounded" alt="coffee-hero">
+            </div>
+        </div>
+    </div>
+
+    <!-- Sobre nosotros -->
+    <div class="container-fluid  text-dark bg-white">
+        <div class="row align-items-center">
+
+            <!-- Imagen a la izquierda (col-6 en todos los tamaños, pero oculta en md en adelante) -->
+            <div class="col-12 col-sm-6 d-none d-sm-block">
+                <img src="./img/about-image.jpg" class="img-fluid rounded" alt="coffee-hero">
+            </div>
+
+            <!-- Texto a la derecha (col-6 en todos los tamaños) -->
+            <div class="text-center col-12 col-sm-6">
+                <h2 class="text-color2 border-bottom">Sobre nosotros</h2>
+                <p>Bienvenid@ a nuestra cafetería, donde todo el mundo...</p>
+                <div>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-whatsapp"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Nuestro menú (3 cards) -->
+    <div class="container-fluid text-white bg-dark">
+
+        <!-- Título de la sección-->
+        <div class="row">
+            <div class="col-12 justify-content-center">
+                <h2 class="text-center text-color2 p-5">Nuestro menú</h2>
+            </div>
+        </div>
+
+
+        <!-- Galería de productos en Grid -->
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="card bg-white" style="width: 18rem;">
+                    <img src="./img/hot-beverages.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Bebidas calientes</h5>
+                        <p class="card-text">Some quick example text...</p>
+                        <a href="#" class="btn btn-color2">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="card bg-white" style="width: 18rem;">
+                    <img src="./img/cold-beverages.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Bebidas frías</h5>
+                        <p class="card-text">Some quick example text...</p>
+                        <a href="#" class="btn btn-color2">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="card bg-white" style="width: 18rem;">
+                    <img src="./img/refreshment.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Refrescos</h5>
+                        <p class="card-text">Some quick example text...</p>
+                        <a href="#" class="btn btn-color2">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Carrusel prueba testimonios -> FAQ's con acordeon -->
+
+    <div class="container-fluid text-dark bg-white">
+
+        <!-- Título de la sección-->
+        <h2 class="text-center p-5">Testimonios</h2>
+
+        <!-- Carrusel -->
+        <div id="carouselExampleIndicators" class="carousel slide">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner p-5">
+                <!-- Primer item -->
+                <div class="carousel-item active">
+                    <div class="text-center">
+                        <img src="./img/user-1.jpg" class="d-block mx-auto rounded-circle"
+                            style="width: 150px; height: 150px; object-fit: cover;" alt="...">
+                        <p class="mt-3">Texto del usuario 1</p>
+                    </div>
+                </div>
+                <!-- Segundo item -->
+                <div class="carousel-item">
+                    <div class="text-center">
+                        <img src="./img/user-2.jpg" class="d-block mx-auto rounded-circle"
+                            style="width: 150px; height: 150px; object-fit: cover;" alt="...">
+                        <p class="mt-3">Texto del usuario 2</p>
+                    </div>
+                </div>
+                <!-- Tercer item -->
+                <div class="carousel-item">
+                    <div class="text-center">
+                        <img src="./img/user-3.jpg" class="d-block mx-auto rounded-circle"
+                            style="width: 150px; height: 150px; object-fit: cover;" alt="...">
+                        <p class="mt-3">Texto del usuario 3</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Acordeon prueba -> Galería de comida carrusel -->
+    <div class="p-5">
+        <!-- Título de la sección-->
+        <h2 class="text-center p-5 text-color2">Preguntas frecuentes</h2>
+
+        <div class="container-fluid text-dark bg-white col-8">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Accordion Item #1
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate
+                            the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Accordion Item #2
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate
+                            the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's
+                            imagine
+                            this being filled with some actual content.</div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            Accordion Item #3
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate
+                            the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing
+                            more
+                            exciting happening here in terms of content, but just filling up the space to make it look,
+                            at
+                            least at first glance, a bit more representative of how this would look in a real-world
+                            application.</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulario -->
+    <div class="p-5 bg-white">
+        <!-- Título de la sección-->
+        <h2 class="text-center p-5 text-dark">Formulario</h2>
+        <div class="mb-3 col-4">
+            <label for="exampleFormControlInput1" class="form-label"><i class="bi bi-envelope-at"></i> Dirección de
+                correo </label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3 col-4">
+            <label for="exampleFormControlTextarea1" class="form-label"><i class="bi bi-chat-left-text"></i>
+                Mensaje</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+<footer>
+    <div class="bg-dark p-4 text-color2">
+        <p>Copy&Right 2025 coffe shop</p>
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-whatsapp"></i>
+    </div>
+</footer>
+
+<!--
     <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
     <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
     <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
@@ -32,8 +291,5 @@
     <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
     <div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
     -->
-</body>
-
-<footer></footer>
 
 </html>
