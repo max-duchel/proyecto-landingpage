@@ -6,22 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <!--css de bootstrap v5.3.3-->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css" />
     <!--js de bootstrap v5.3.3-->
     <script defer src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </head>
 
-<body> <!-- color1 es una variable de color personalizada -->
+<body>
+    <!-- Formato grid (container -> row -> col) -->
 
     <!-- Cabecera -->
     <header class="sticky-top bg-color1">
-        <div class="container-fluid sticky-top bg-color1 p-4"> <!-- Formato grid (container -> row -> col) -->
-            <div class="row"> <!-- Una fila -->
-                <div class="col-12"> <!-- Una columna que ocupa el máximo -->
+        <div class="container-fluid bg-color1 p-4">
+            <div class="row">
+                <div class="col-12">
                     <h1>
                         <a href="#" class="text-white text-decoration-none">
-                            <i class="bi bi-cup-hot"></i> Coffee Shop
+                            <i class="bi bi-cup-hot"></i> sabora_café
                         </a>
                     </h1>
                 </div>
@@ -34,8 +35,8 @@
         <div class="row align-items-center">
             <!-- Texto a la izquierda (col-6 en todos los tamaños) -->
             <div class="col-12 col-sm-6">
-                <h2 class="text-color2">Best coffe</h2>
-                <p>Bienvenid@ a nuestra cafetería, donde todo el mundo...</p>
+                <h2 class="text-color2">El mejor café, cada día</h2>
+                <p>Bienvenid@ a nuestra cafetería, donde cada taza cuenta una historia.</p>
             </div>
 
             <!-- Imagen a la derecha (col-6 en todos los tamaños, pero oculta en md en adelante) -->
@@ -49,68 +50,77 @@
     <div class="container-fluid  text-dark bg-white">
         <div class="row align-items-center">
 
-            <!-- Imagen a la izquierda (col-6 en todos los tamaños, pero oculta en md en adelante) -->
-            <div class="col-12 col-sm-6 d-none d-sm-block">
+            <div class="col-12 mt-3 col-sm-6 image-container mb-3">
                 <img src="./img/about-image.jpg" class="img-fluid rounded" alt="coffee-hero">
             </div>
 
-            <!-- Texto a la derecha (col-6 en todos los tamaños) -->
-            <div class="text-center col-12 col-sm-6">
-                <h2 class="text-color2 border-bottom">Sobre nosotros</h2>
-                <p>Bienvenid@ a nuestra cafetería, donde todo el mundo...</p>
-                <div>
-                    <i class="bi bi-facebook"></i>
-                    <i class="bi bi-instagram"></i>
-                    <i class="bi bi-whatsapp"></i>
+            <div class="text-center col-12 mt-3 col-sm-6 mb-3">
+                <h2 class="text-color2 border-bottom">
+                    Sobre nosotros
+                </h2>
+                <p>
+                    En <b>sabora_café</b> creemos que el café es más que una bebida, es una experiencia.
+                    Nuestra pasión por la calidad y el buen servicio nos motiva a ofrecerte los mejores
+                    granos, preparados con amor y dedicación.
+                </p>
+                <div class="d-flex justify-content-center gap-3 mb-3">
+                    <a href="#" class="icon-link"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="icon-link"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="icon-link"><i class="bi bi-whatsapp"></i></a>
                 </div>
-
             </div>
+
         </div>
     </div>
 
-    <!-- Nuestro menú (3 cards) -->
-    <div class="container-fluid text-white bg-dark">
+
+    <!-- Nuestro menú - 3 cards -->
+    <div class="container-fluid text-white bg-dark py-5">
 
         <!-- Título de la sección-->
         <div class="row">
-            <div class="col-12 justify-content-center">
-                <h2 class="text-center text-color2 p-5">Nuestro menú</h2>
+            <div class="col-12 text-center">
+                <h2 class="text-center text-color2 pb-4">Nuestro menú</h2>
             </div>
         </div>
 
-
         <!-- Galería de productos en Grid -->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center gap-5">
 
-            <div class="col-12 col-md-4 col-lg-3">
-                <div class="card bg-white" style="width: 18rem;">
+            <div class="col-12 col-sm-5 col-lg-3 d-flex justify-content-center">
+                <!-- w-75     → En pantallas pequeñas por defecto, la tarjeta ocupa el 75% del ancho del contenedor -->
+                <!-- w-md-100 → En pantallas medianas y más grandes, la tarjeta ocupa el 100% del ancho del contenedor -->
+                <div class="card bg-white w-75 w-md-100">
                     <img src="./img/hot-beverages.png" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <h5 class="card-title">Bebidas calientes</h5>
-                        <p class="card-text">Some quick example text...</p>
-                        <a href="#" class="btn btn-color2">Go somewhere</a>
+                        <p class="card-text">Desde un espresso intenso hasta un cremoso cappuccino, disfruta del calor y
+                            la suavidad de nuestras bebidas.</p>
+                        <a href="#" class="btn btn-color2">Ver más</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-4 col-lg-3">
-                <div class="card bg-white" style="width: 18rem;">
+            <div class="col-12 col-sm-5 col-lg-3 d-flex justify-content-center">
+                <div class="card bg-white w-75 w-md-100">
                     <img src="./img/cold-beverages.png" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <h5 class="card-title">Bebidas frías</h5>
-                        <p class="card-text">Some quick example text...</p>
-                        <a href="#" class="btn btn-color2">Go somewhere</a>
+                        <p class="card-text">Refrescantes y deliciosas, ideales para los días calurosos o cuando buscas
+                            algo diferente.</p>
+                        <a href="#" class="btn btn-color2">Ver más</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-4 col-lg-3">
-                <div class="card bg-white" style="width: 18rem;">
+            <div class="col-12 col-sm-5 col-lg-3 d-flex justify-content-center">
+                <div class="card bg-white w-75 w-md-100">
                     <img src="./img/refreshment.png" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <h5 class="card-title">Refrescos</h5>
-                        <p class="card-text">Some quick example text...</p>
-                        <a href="#" class="btn btn-color2">Go somewhere</a>
+                        <p class="card-text">Bebidas naturales y burbujeantes para acompañar tu café o disfrutar a
+                            cualquier hora del día.</p>
+                        <a href="#" class="btn btn-color2">Ver más</a>
                     </div>
                 </div>
             </div>
@@ -118,32 +128,34 @@
         </div>
     </div>
 
-    <!-- Carrusel prueba testimonios -> FAQ's con acordeon -->
 
+    <!-- Carrousel - Testimonios -->
     <div class="container-fluid text-dark bg-white">
-
         <!-- Título de la sección-->
-        <h2 class="text-center p-5">Testimonios</h2>
-
-        <!-- Carrusel -->
+        <h2 class="text-center p-5">
+            Testimonios
+        </h2>
+        <!-- Carrousel -->
         <div id="carouselExampleIndicators" class="carousel slide">
 
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            <div class="carousel-indicators"> <!-- Indicadores inferiores -->
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                    class="active bg-dark" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="bg-dark"
                     aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="bg-dark"
                     aria-label="Slide 3"></button>
             </div>
 
             <div class="carousel-inner p-5">
+
                 <!-- Primer item -->
                 <div class="carousel-item active">
                     <div class="text-center">
                         <img src="./img/user-1.jpg" class="d-block mx-auto rounded-circle"
                             style="width: 150px; height: 150px; object-fit: cover;" alt="...">
-                        <p class="mt-3">Texto del usuario 1</p>
+                        <p class="mt-3">“El mejor café de la ciudad, siempre cremoso y con un servicio increíble.” - Ana
+                            G.</p>
                     </div>
                 </div>
                 <!-- Segundo item -->
@@ -151,7 +163,8 @@
                     <div class="text-center">
                         <img src="./img/user-2.jpg" class="d-block mx-auto rounded-circle"
                             style="width: 150px; height: 150px; object-fit: cover;" alt="...">
-                        <p class="mt-3">Texto del usuario 2</p>
+                        <p class="mt-3">“Un ambiente acogedor perfecto para trabajar o relajarse con amigos.” - Adri
+                            M.</p>
                     </div>
                 </div>
                 <!-- Tercer item -->
@@ -159,12 +172,14 @@
                     <div class="text-center">
                         <img src="./img/user-3.jpg" class="d-block mx-auto rounded-circle"
                             style="width: 150px; height: 150px; object-fit: cover;" alt="...">
-                        <p class="mt-3">Texto del usuario 3</p>
+                        <p class="mt-3">“Amo la variedad de bebidas frías, siempre tienen algo nuevo para probar.” -
+                            David L.</p>
                     </div>
                 </div>
-            </div>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            </div>
+            <!-- Flechas -->
+            <button class="carousel-control-prev color:dark" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -180,64 +195,63 @@
 
     </div>
 
-    <!-- Acordeon prueba -> Galería de comida carrusel -->
+
+    <!-- Acordeon - Preguntas frecuentes -->
     <div class="p-5">
         <!-- Título de la sección-->
-        <h2 class="text-center p-5 text-color2">Preguntas frecuentes</h2>
+        <h2 class="text-center p-5 text-color2">
+            Preguntas frecuentes
+        </h2>
 
-        <div class="container-fluid text-dark bg-white col-8">
+        <div class="container-fluid text-dark col-12 col-sm-10 col-md-8">
             <div class="accordion accordion-flush" id="accordionFlushExample">
-
+                <!-- Primer item -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Accordion Item #1
+                            ¿De dónde proviene nuestro café?
                         </button>
                     </h2>
                     <div id="flush-collapseOne" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate
-                            the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                        <div class="accordion-body">
+                            Nuestros granos provienen de fincas seleccionadas en Colombia y
+                            Etiopía, garantizando calidad y un sabor auténtico en cada taza.
+                        </div>
                     </div>
                 </div>
-
+                <!-- Segundo item -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Accordion Item #2
+                            ¿Qué métodos de preparación utilizamos?
                         </button>
                     </h2>
                     <div id="flush-collapseTwo" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate
-                            the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's
-                            imagine
-                            this being filled with some actual content.</div>
+                        <div class="accordion-body">
+                            Combinamos técnicas tradicionales con innovaciones modernas para
+                            extraer lo mejor de cada grano y resaltar su carácter único.
+                        </div>
                     </div>
                 </div>
-
+                <!-- Tercer item -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseThree" aria-expanded="false"
                             aria-controls="flush-collapseThree">
-                            Accordion Item #3
+                            ¿Ofrecen opciones sin cafeína y alternativas veganas?
                         </button>
                     </h2>
                     <div id="flush-collapseThree" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate
-                            the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing
-                            more
-                            exciting happening here in terms of content, but just filling up the space to make it look,
-                            at
-                            least at first glance, a bit more representative of how this would look in a real-world
-                            application.</div>
+                        <div class="accordion-body">
+                            Sí, contamos con descafeinados y opciones veganas, preparados con el
+                            mismo esmero y pasión que nuestros cafés tradicionales.
+                        </div>
                     </div>
                 </div>
 
@@ -245,51 +259,69 @@
         </div>
     </div>
 
+
     <!-- Formulario -->
-    <div class="p-5 bg-white">
-        <!-- Título de la sección-->
-        <h2 class="text-center p-5 text-dark">Formulario</h2>
-        <div class="mb-3 col-4">
-            <label for="exampleFormControlInput1" class="form-label"><i class="bi bi-envelope-at"></i> Dirección de
-                correo </label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <div class="container-fluid p-3 bg-white">
+        <div class="container-fluid col-12 col-sm-8 col-md-6 col-lg-4">
+            <!-- Título de la sección-->
+            <h2 class="text-center p-5 text-dark">
+                Formulario
+            </h2>
+
+            <div class="row justify-content-center mb-3 ">
+                <!-- Dirección de correo (email) siempre arriba -->
+                <div>
+                    <label for="exampleFormControlInput1" class="form-label">
+                        Dirección de correo
+                    </label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-envelope-at"></i>
+                        </span>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="nombre@ejemplo.com">
+                    </div>
+                </div>
+
+                <!-- Mensaje (textarea) debajo de email -->
+                <div>
+                    <label for="exampleFormControlTextarea1" class="form-label">
+                        Mensaje
+                    </label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-chat-left-text"></i>
+                        </span>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            placeholder="Cuéntanos..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-        <div class="mb-3 col-4">
-            <label for="exampleFormControlTextarea1" class="form-label"><i class="bi bi-chat-left-text"></i>
-                Mensaje</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
+
     </div>
-
-
-
-
-
-
 
 </body>
 
 <footer>
-    <div class="bg-dark p-4 text-color2">
-        <p>Copy&Right 2025 coffe shop</p>
-        <i class="bi bi-facebook"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-whatsapp"></i>
-    </div>
-</footer>
+    <div class="bg-dark p-4">
+        <div class="container-fluid">
+            <div class="row justify-content-center text-color2">
+                <div class="col-12 mb-3 text-center">
+                    <p class="mb-0">Copy&Right 2025 sabora_café</p>
+                </div>
+                <div class="d-flex justify-content-center gap-3 mb-3">
+                    <a href="#" class="icon-link-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="icon-link-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="icon-link-2"><i class="bi bi-whatsapp"></i></a>
+                </div>
 
-<!--
-    <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
-    <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
-    <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
-    <div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
-    <div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
-    <div class="p-3 mb-2 bg-info text-dark">.bg-info</div>
-    <div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
-    <div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
-    <div class="p-3 mb-2 bg-body text-dark">.bg-body</div>
-    <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
-    <div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
-    -->
+            </div>
+        </div>
+    </div>
+
+</footer>
 
 </html>

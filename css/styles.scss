@@ -1,0 +1,39 @@
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+// Create your own map
+$custom-colors: (
+    "color1": rgb(78, 43, 44),
+    "color2" : #fc9815
+);
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+    // Las variables personalizadas de Bootstrap se definen dentro del mapa $theme-colors
+    background-color: map-get($theme-colors, "color1");
+}
+
+.icon-link {
+    color: black;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.icon-link:hover {
+    transform: scale(1.5);
+    color: #fc9815;
+}
+
+/**
+ * Invierte los colores, haciendo que el blanco se vuelva negro.
+ * Ajusta el brillo a 0, asegurando que el color negro sea opaco, sin brillo.
+ */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1) brightness(0);
+}
